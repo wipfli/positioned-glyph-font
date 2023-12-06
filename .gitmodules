@@ -1,0 +1,12 @@
+[submodule "font-maker/vendor/sdf-glyph-foundry"]
+	path = font-maker/vendor/sdf-glyph-foundry
+	url = https://github.com/mapbox/sdf-glyph-foundry.git
+[submodule "font-maker/vendor/filesystem"]
+	path = font-maker/vendor/filesystem
+	url = https://github.com/gulrak/filesystem.git
+[submodule "font-maker/vendor/cxxopts"]
+	path = font-maker/vendor/cxxopts
+	url = https://github.com/jarro2783/cxxopts.git
+[submodule "font-maker/vendor/protozero"]
+	path = font-maker/vendor/protozero
+	url = https://github.com/mapbox/protozero.git
