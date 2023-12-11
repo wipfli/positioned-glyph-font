@@ -68,7 +68,7 @@ def build_unicode_to_font_path(fonts_directory):
                     result[c[0]] = [font_path]
 
     return result
-    
+
 def split_to_encode(text, ignore_codepoints):
     parts = [] # [{'text': 'B', 'to_encode': True}, {'text': 'asel', 'to_encode': False}, ...]
     if len(text) == 0:
@@ -77,10 +77,10 @@ def split_to_encode(text, ignore_codepoints):
     letter = text[0]
     part = {
         'text': letter,
-        'to_encode': not ignore_codepoints[ord(letter)]
+        'to_encode': ord(letter) < 2**16 and not ignore_codepoints[ord(letter)]
     }
     for letter in text[1:]:
-        to_encode = not ignore_codepoints[ord(letter)]
+        to_encode = ord(letter) < 2**16 and not ignore_codepoints[ord(letter)]
         if to_encode != part['to_encode']:
             parts.append(part)
             part = {
@@ -94,7 +94,7 @@ def split_to_encode(text, ignore_codepoints):
 
 def get_first_font(letter, unicode_to_font_path):
     if ord(letter) not in unicode_to_font_path:
-        print(f'ERROR: Could not find font for Unicode codepoint {ord(letter)} ({letter}) in text {text}.')
+        print(f'ERROR: Could not find font for Unicode codepoint U+{hex(ord(letter))[2:].upper().zfill(4)} ({letter}).')
         exit()
     return unicode_to_font_path[ord(letter)][0]
     
@@ -128,8 +128,10 @@ def get_glyphs_of_text(text, ignore_codepoints, unicode_to_font_path):
     to_encode_parts = split_to_encode(text, ignore_codepoints)
     all_glyphs = set([])
     all_glyphs_downscaled = set([])
+    ignore_text = True
     for to_encode_part in to_encode_parts:
         if to_encode_part['to_encode']:
+            ignore_text = False
             font_parts = split_font_parts(to_encode_part['text'], unicode_to_font_path)
             for font_part in font_parts:
                 glyphs = get_glyphs(font_part['font'], font_part['text'])
@@ -150,24 +152,31 @@ def get_glyphs_of_text(text, ignore_codepoints, unicode_to_font_path):
                         int(glyph['x_advance'] / 64),
                     )
                     all_glyphs_downscaled.add(item_downscaled)
-    return all_glyphs, all_glyphs_downscaled
+    return all_glyphs, all_glyphs_downscaled, ignore_text
     
 
 def get_glyphs_of_labels(labels, ignore_codepoints, unicode_to_font_path):
 
     i = 0
+    num_ignored_labels = 0
     all_glyphs = set([])
     all_glyphs_downscaled = set([])
+    labels_requiring_encoding = []
     for label in labels:
         i += 1
-        if i % 1000 == 0:
-            print(i, len(all_glyphs), len(all_glyphs_downscaled))
-        glyphs, glyphs_downscaled = get_glyphs_of_text(label, ignore_codepoints, unicode_to_font_path)
+        if i % 100000 == 0:
+            print(i, 'harfbuzz glyphs', len(all_glyphs), 'maplibre downscaled sdf glyphs', len(all_glyphs_downscaled), 'num ignored labels', num_ignored_labels)
+        glyphs, glyphs_downscaled, ignore_text = get_glyphs_of_text(label, ignore_codepoints, unicode_to_font_path)
         for glyph in glyphs:
             all_glyphs.add(glyph)
         for glyph_downscaled in glyphs_downscaled:
             all_glyphs_downscaled.add(glyph_downscaled)
-    return all_glyphs, all_glyphs_downscaled
+        if ignore_text:
+            num_ignored_labels += 1
+        else:
+            labels_requiring_encoding.append(label)
+    print('num labels', len(labels), 'num ignored labels', num_ignored_labels)
+    return all_glyphs, all_glyphs_downscaled, labels_requiring_encoding
 
 
 fonts_directory = '../fonts/'
@@ -181,6 +190,15 @@ unicode_to_font_path = build_unicode_to_font_path(fonts_directory)
 with open('labels.json') as f:
     labels = json.load(f)
 
-all_glyphs, all_glyphs_downscaled = get_glyphs_of_labels(labels, ignore_codepoints, unicode_to_font_path)
+all_glyphs, all_glyphs_downscaled, labels_requiring_encoding = get_glyphs_of_labels(labels, ignore_codepoints, unicode_to_font_path)
 
 print(len(all_glyphs), len(all_glyphs_downscaled))
+
+with open('all_glyphs.json', 'w') as f:
+    json.dump(list(all_glyphs), f, indent=2)
+
+with open('all_glyphs_downscaled.json', 'w') as f:
+    json.dump(list(all_glyphs_downscaled), f, indent=2)
+
+with open('labels_requiring_encoding.json', 'w') as f:
+    json.dump(labels_requiring_encoding, f, indent=2)

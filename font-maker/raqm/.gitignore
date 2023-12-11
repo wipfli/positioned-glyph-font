@@ -2,3 +2,4 @@ run_raqm.so
 ignore_codepoints.json
 labels.json
 encoded_labels.json
+glyph_to_unicode_encoding.json

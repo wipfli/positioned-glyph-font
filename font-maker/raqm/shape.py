@@ -77,10 +77,10 @@ def split_to_encode(text, ignore_codepoints):
     letter = text[0]
     part = {
         'text': letter,
-        'to_encode': not ignore_codepoints[ord(letter)]
+        'to_encode': ord(letter) < 2**16 and not ignore_codepoints[ord(letter)]
     }
     for letter in text[1:]:
-        to_encode = not ignore_codepoints[ord(letter)]
+        to_encode = ord(letter) < 2**16 and not ignore_codepoints[ord(letter)]
         if to_encode != part['to_encode']:
             parts.append(part)
             part = {
@@ -94,7 +94,7 @@ def split_to_encode(text, ignore_codepoints):
 
 def get_first_font(letter, unicode_to_font_path):
     if ord(letter) not in unicode_to_font_path:
-        print(f'ERROR: Could not find font for Unicode codepoint {ord(letter)} ({letter}) in text {text}.')
+        print(f'ERROR: Could not find font for Unicode codepoint U+{hex(ord(letter))[2:].upper().zfill(4)} ({letter}).')
         exit()
     return unicode_to_font_path[ord(letter)][0]
     
@@ -150,7 +150,11 @@ def shape_label(text, ignore_codepoints, unicode_to_font_path):
 def shape_labels(labels, ignore_codepoints, unicode_to_font_path):
     shaped_labels = []
 
+    i = 0
     for label in labels:
+        i += 1
+        if i % 100000 == 0:
+            print(i)
         label_parts = shape_label(label, ignore_codepoints, unicode_to_font_path)
         shaped_labels.append({
             'text': label,
@@ -190,7 +194,10 @@ def generate_encoding(shaped_labels, ignore_codepoints):
                     glyph_tuple = get_glyph_tuple(label_part['font'], glyph)
                     unique_glyphs.add(glyph_tuple)
 
-    unique_glyphs = list(unique_glyphs)
+    unique_glyphs = sorted(list(unique_glyphs))
+
+    for g in unique_glyphs:
+        print(g)
 
     glyph_to_unicode_encoding = {}
     codepoint = -1
@@ -224,7 +231,7 @@ with open('ignore_codepoints.json') as f:
 
 unicode_to_font_path = build_unicode_to_font_path(fonts_directory)
 
-with open('labels.json') as f:
+with open('labels_requiring_encoding.json') as f:
     labels = json.load(f)
 
 shaped_labels = shape_labels(labels, ignore_codepoints, unicode_to_font_path)
@@ -236,8 +243,7 @@ glyph_to_unicode_encoding = generate_encoding(shaped_labels, ignore_codepoints)
 # print(glyph_to_unicode_encoding)
 
 encoded_labels = encode_labels(shaped_labels, glyph_to_unicode_encoding)
-
-print(encoded_labels)
+# print(encoded_labels)
 
 with open('encoded_labels.json', 'w') as f:
     json.dump(encoded_labels, f, indent=2)

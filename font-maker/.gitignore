@@ -7,3 +7,4 @@ app/public/sdfglyph.*
 font-maker
 encoding.hpp
 output_dir/
+.bash_history
