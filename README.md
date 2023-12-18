@@ -17,10 +17,8 @@ The following style.json should work with any version of MapLibre:
 
 https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/style.json
 
-If you want to see the map in a particular language, you can use the following snippet in your browser console:
+If you want to see the map in a particular language, you append `&language=<language>` to the URL.
 
-```js
-map.setLayoutProperty("labels", "text-field", ["get", "@name:hi"])
-```
+Example for Nepali:
 
-This will show all labels in Hindi.
+https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/#map=11.11/27.693/85.1968&language=ne
