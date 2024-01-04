@@ -1,6 +1,6 @@
 {
     "name": "MapLibre",
-    "glyphs": "https:wipfli.github.io/maplibre-precomposed-i18n/examples/hindi/font/{fontstack}/{range}.pbf",
+    "glyphs": "https://wipfli.github.io/maplibre-precomposed-i18n/examples/hindi/font/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "hindi-labels",
