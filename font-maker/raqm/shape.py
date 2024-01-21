@@ -248,6 +248,13 @@ encoded_labels = encode_labels(shaped_labels, glyph_to_unicode_encoding)
 with open('encoded_labels.json', 'w') as f:
     json.dump(encoded_labels, f, indent=2)
 
+label_mapping = {}
+for label, encoded_label in zip(labels, encoded_labels):
+    label_mapping[label] = encoded_label
+
+with open('label_mapping.json', 'w') as f:
+    json.dump(label_mapping, f, indent=2)
+
 def create_encoding_hpp(glyph_to_unicode_encoding):
     unicode_to_glyph_encoding = {}
     for key in glyph_to_unicode_encoding:

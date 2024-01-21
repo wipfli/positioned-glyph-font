@@ -28,7 +28,7 @@ cd raqm/
 ./run.sh
 ```
 
-This assumes that `raqm/labels.json` is a json list of strings with containing the labels. It produces `raqm/encoded_labels.json` for you to use in the tileset and `encoding.hpp` for the font tool.
+This assumes that `raqm/labels_requiring_encoding.json` is a json list of strings with containing the labels. It produces `raqm/encoded_labels.json` for you to use in the tileset and `encoding.hpp` for the font tool.
 
 ## Font Tool
 
