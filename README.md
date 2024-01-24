@@ -1,24 +1,34 @@
-# maplibre-precomposed-i18n
-Precomposed MapLibre fonts for better internationalization of map labels
+# Positioned Glyph Font
 
-## Examples
+## Steps
 
-### Global
 
-Global examples using the following fonts:
+Download Devanagari corpus from https://github.com/wipfli/word-corpus to the `corpus` folder.
 
-NotoSansBalinese-Regular.ttf, NotoSansBengali-Regular.ttf, NotoSansBuginese-Regular.ttf, NotoSansCanadianAboriginal-Regular.ttf, NotoSansCherokee-Regular.ttf, NotoSansCoptic-Regular.ttf, NotoSansDevanagari-Regular.ttf, NotoSansEthiopic-Regular.ttf, NotoSansGeorgian-Regular.ttf, NotoSansGlagolitic-Regular.ttf, NotoSansGujarati-Regular.ttf, NotoSansGurmukhi-Regular.ttf, NotoSansJavanese-Regular.ttf, NotoSansKannada-Regular.ttf, NotoSansKhmer-Regular.ttf, NotoSansLao-Regular.ttf, NotoSansLisu-Regular.ttf, NotoSansMalayalam-Regular.ttf, NotoSansMath-Regular.ttf, NotoSansMeeteiMayek-Regular.ttf, NotoSansMongolian-Regular.ttf, NotoSansMyanmar-Regular.ttf, NotoSansNewTaiLue-Regular.ttf, NotoSansNKo-Regular.ttf, NotoSansOlChiki-Regular.ttf, NotoSansOriya-Regular.ttf, NotoSans-Regular.ttf, NotoSansRunic-Regular.ttf, NotoSansSinhala-Regular.ttf, NotoSansSundanese-Regular.ttf, NotoSansSylotiNagri-Regular.ttf, NotoSansSymbols2-Regular.ttf, NotoSansSymbols-Regular.ttf, NotoSansSyriac-Regular.ttf, NotoSansTagalog-Regular.ttf, NotoSansTaiLe-Regular.ttf, NotoSansTamil-Regular.ttf, NotoSansTelugu-Regular.ttf, NotoSansThaana-Regular.ttf, NotoSansThai-Regular.ttf, NotoSansTibetan-Regular.ttf, NotoSansTifinagh-Regular.ttf
+```bash
+docker build -t positioned-glyph-font .
+```
 
-https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/
+```bash
+docker run --rm -it -v "$(pwd)":/root/ positioned-glyph-font
+```
 
-<a href="https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/"><img src="examples/global/screenshot.png"></a>
+Run all following commands inside the docker container.
 
-The following style.json should work with any version of MapLibre:
+Build raqm with:
 
-https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/style.json
+```bash
+./compile_raqm.sh
+```
 
-If you want to see the map in a particular language, you append `&language=<language>` to the URL.
+Build the parameter space files with:
 
-Example for Nepali:
+```bash
+python3 build_parameter_space.py
+```
 
-https://wipfli.github.io/maplibre-precomposed-i18n/examples/global/#map=11.11/27.693/85.1968&language=ne
+Analyze and downsample the parameter space files with:
+
+```bash
+python3 analyze_parameter_space.py
+```
