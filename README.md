@@ -32,3 +32,9 @@ Analyze and downsample the parameter space files with:
 ```bash
 python3 analyze_parameter_space.py
 ```
+
+```bash
+cd font-maker
+docker run --rm -it -v "$(pwd)":/root/ positioned-glyph-font
+./run.sh
+```
