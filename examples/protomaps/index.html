@@ -20,8 +20,10 @@
         center: [85, 27],
         zoom: 8,
         maplibreLogo: true,
-        hash: "map"
+        hash: "map",
+        attributionControl: false
     });
+    map.addControl(new maplibregl.AttributionControl({'customAttribution': '<a href="https://maplibre.org">MapLibre</a> | <a href="https://github.com/wipfli/positioned-glyph-font">Code on GitHub</a>'}));
 </script>
 </body>
 </html>
