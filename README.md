@@ -1,12 +1,16 @@
 # Positioned Glyph Font
 
+The assumption of a one-to-one mapping between glyphs and Unicode codepoints that usually exists in MapLibre font files is given up in a positioned glyph font. Instead, codepoints are used as indices of positioned glyphs.
+
+Read more about how traditional MapLibre text rendering works here: https://github.com/wipfli/about-text-rendering-in-maplibre
+
 ## Demo
 
-A positioned glyph font demo for Nepal with based on the Protomaps basemaps is available at:
+A positioned glyph font demo for Nepali written in the Devanagari script and based on the Protomaps basemap is available at:
 
 https://wipfli.github.io/positioned-glyph-font/examples/protomaps/
 
-This demo uses the [positioned-glyph-font-devanagari branch](https://github.com/wipfli/basemaps/tree/positioned-glyph-font-devanagari) which has some modification to the basemaps Planetiler profile.
+This demo uses the positioned-glyph-font-devanagari [branch](https://github.com/wipfli/basemaps/tree/positioned-glyph-font-devanagari) which has some modification to the basemaps Planetiler profile.
 
 If you find bugs in the demo, please open an [Issue](https://github.com/wipfli/positioned-glyph-font/issues).
 
