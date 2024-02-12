@@ -16,8 +16,11 @@ If you find bugs in the demo, please open an [Issue](https://github.com/wipfli/p
 
 ## Steps
 
+Download Devanagari corpus from https://github.com/wipfli/word-corpus to the `corpus` folder. You should get the following 3 files:
 
-Download Devanagari corpus from https://github.com/wipfli/word-corpus to the `corpus` folder.
+- `corpus/osm-devanagari-corpus.txt`
+- `corpus/wikidata-devanagari-corpus.txt`
+- `corpus/wikipedia-devanagari-corpus.txt`
 
 There is a docker image with the dependencies for Raqm, Harfbuzz, and font-maker.
 
@@ -61,8 +64,12 @@ docker run --rm -it -v "$(pwd)":/root/ positioned-glyph-font
 ./run.sh
 ```
 
+This command will generate the font `.pbf` files in `font-maker/output_dir/the-name`.
+
 Run the encoding http server with:
 
 ```bash
 python3 server.py
 ```
+
+To test the encoding server, open a web browser and go to the URL `http://localhost:3002/काठमाण्डौँ` (Kathmandu in Nepali). You should get this response: `इऀ।ऄऀ॰फ੏` which is the encoded label.
