@@ -38,11 +38,19 @@ Build raqm with:
 ./compile_raqm.sh
 ```
 
+You should now have the file `run_raqm.so`.
+
 Build the parameter space files with:
 
 ```bash
 python3 build_parameter_space.py
 ```
+
+You should now have these 3 files:
+
+- `parameter_space/osm-devanagari-parameter-space.csv`
+- `parameter_space/wikidata-devanagari-parameter-space.csv`
+- `parameter_space/wikipedia-devanagari-parameter-space.csv`
 
 Analyze and downsample the parameter space files with:
 
@@ -50,11 +58,23 @@ Analyze and downsample the parameter space files with:
 python3 analyze_parameter_space.py
 ```
 
+You should now have the 3 files:
+
+- `parameter_space/osm-devanagari-downsampled-parameter-space.csv`
+- `parameter_space/wikidata-devanagari-downsampled-parameter-space.csv`
+- `parameter_space/wikipedia-devanagari-downsampled-parameter-space.csv`
+
+
 Generate encoding with:
 
 ```bash
 python3 generate_encoding.py
 ```
+
+You should now have the 2 files:
+
+- `encoding.csv`
+- `font-maker/encoding.hpp`
 
 Create font pbf files with:
 
