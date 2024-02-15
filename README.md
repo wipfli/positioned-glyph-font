@@ -10,7 +10,7 @@ A positioned glyph font demo for several languages written in the Devanagari scr
 
 https://wipfli.github.io/positioned-glyph-font/examples/protomaps/
 
-The labels use name tags from OSM in the following order: `name:ne` (Nepali), `name:hi` (Hindi), `name:mr` (Marathi), and finally the generic `name` tag.
+The labels use name tags from OSM in the following order: `name:ne` (Nepali), `name:hi` (Hindi), `name:mr` (Marathi), and `name:en` (English).
 
 This demo uses the positioned-glyph-font-devanagari [branch](https://github.com/wipfli/basemaps/tree/positioned-glyph-font-devanagari) which has some modification to the basemaps Planetiler profile.
 

@@ -2487,7 +2487,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": 12
@@ -2529,7 +2529,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": [
@@ -2593,7 +2593,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": 12
@@ -2643,7 +2643,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": [
@@ -2700,7 +2700,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": [
@@ -2765,7 +2765,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": 12
@@ -2807,7 +2807,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-font": [
@@ -2895,7 +2895,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-size": 11,
@@ -2975,7 +2975,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-font": [
@@ -3226,7 +3226,7 @@
                     6,
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-font": [
@@ -3286,7 +3286,7 @@
                     ],
                     [
                         "get",
-                        "@name"
+                        "@name:en"
                     ]
                 ],
                 "text-font": [
