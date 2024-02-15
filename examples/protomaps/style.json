@@ -4,7 +4,7 @@
         "protomaps": {
             "type": "vector",
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
-            "url": "https://tiles.swiss-map.cc/protomaps-nepal-pgf-20240205.json"
+            "url": "https://tiles.swiss-map.cc/protomaps-planet-pgf-20240215.json"
         }
     },
     "layers": [
@@ -2479,7 +2479,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": 12
@@ -2513,7 +2521,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": [
@@ -2569,7 +2585,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": 12
@@ -2611,7 +2635,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": [
@@ -2660,7 +2692,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": [
@@ -2717,7 +2757,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": 12
@@ -2751,7 +2799,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-font": [
@@ -2831,7 +2887,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-size": 11,
@@ -2903,7 +2967,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-font": [
@@ -3149,12 +3221,12 @@
                     ],
                     [
                         "get",
-                        "name:short"
+                        "@name:short"
                     ],
                     6,
                     [
                         "get",
-                        "name"
+                        "@name"
                     ]
                 ],
                 "text-font": [
@@ -3206,7 +3278,15 @@
                     ],
                     [
                         "get",
-                        "name"
+                        "@name:hi"
+                    ],
+                    [
+                        "get",
+                        "@name:mr"
+                    ],
+                    [
+                        "get",
+                        "@name"
                     ]
                 ],
                 "text-font": [

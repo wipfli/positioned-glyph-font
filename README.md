@@ -6,9 +6,11 @@ Read more about how traditional MapLibre text rendering works here: https://gith
 
 ## Demo
 
-A positioned glyph font demo for Nepali written in the Devanagari script and based on the Protomaps basemap is available at:
+A positioned glyph font demo for several languages written in the Devanagari script and based on the Protomaps basemap is available at:
 
 https://wipfli.github.io/positioned-glyph-font/examples/protomaps/
+
+The labels use name tags from OSM in the following order: `name:ne` (Nepali), `name:hi` (Hindi), `name:mr` (Marathi), and finally the generic `name` tag.
 
 This demo uses the positioned-glyph-font-devanagari [branch](https://github.com/wipfli/basemaps/tree/positioned-glyph-font-devanagari) which has some modification to the basemaps Planetiler profile.
 
