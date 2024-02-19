@@ -3080,19 +3080,8 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "get",
-                        "@name:short"
-                    ],
-                    6,
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:ne"
                 ],
                 "text-font": [
                     "Noto Sans Regular"
