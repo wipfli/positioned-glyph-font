@@ -2472,23 +2472,8 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": 12
             },
@@ -2514,23 +2499,8 @@
                     "Noto Sans Italic"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": [
                     "interpolate",
@@ -2578,23 +2548,8 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": 12
             },
@@ -2628,23 +2583,8 @@
                     "Noto Sans Medium"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": [
                     "interpolate",
@@ -2685,23 +2625,8 @@
                     "Noto Sans Medium"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": [
                     "interpolate",
@@ -2750,23 +2675,8 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": 12
             },
@@ -2792,23 +2702,8 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-font": [
                     "Noto Sans Regular"
@@ -2880,23 +2775,8 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-size": 11,
                 "text-max-width": 9,
@@ -2960,23 +2840,8 @@
             ],
             "layout": {
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-font": [
                     "case",
@@ -3271,23 +3136,8 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "coalesce",
-                    [
-                        "get",
-                        "@name:ne"
-                    ],
-                    [
-                        "get",
-                        "@name:hi"
-                    ],
-                    [
-                        "get",
-                        "@name:mr"
-                    ],
-                    [
-                        "get",
-                        "@name:en"
-                    ]
+                    "get",
+                    "@name:mr"
                 ],
                 "text-font": [
                     "Noto Sans Medium"
