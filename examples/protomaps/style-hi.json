@@ -2472,8 +2472,19 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": 12
             },
@@ -2499,8 +2510,19 @@
                     "Noto Sans Italic"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": [
                     "interpolate",
@@ -2548,8 +2570,19 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": 12
             },
@@ -2583,8 +2616,19 @@
                     "Noto Sans Medium"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": [
                     "interpolate",
@@ -2625,8 +2669,19 @@
                     "Noto Sans Medium"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": [
                     "interpolate",
@@ -2675,8 +2730,19 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": 12
             },
@@ -2702,8 +2768,19 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-font": [
                     "Noto Sans Regular"
@@ -2775,8 +2852,19 @@
                     "Noto Sans Regular"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-size": 11,
                 "text-max-width": 9,
@@ -2840,8 +2928,19 @@
             ],
             "layout": {
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-font": [
                     "case",
@@ -3080,8 +3179,19 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-font": [
                     "Noto Sans Regular"
@@ -3125,8 +3235,19 @@
                     "pmap:min_zoom"
                 ],
                 "text-field": [
-                    "get",
-                    "@name:hi"
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "get",
+                        "@name:en"
+                    ],
+                    6,
+                    [
+                        "get",
+                        "@name:hi"
+                    ]
                 ],
                 "text-font": [
                     "Noto Sans Medium"
