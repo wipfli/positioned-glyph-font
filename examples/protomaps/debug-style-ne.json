@@ -5,6 +5,13 @@
             "type": "vector",
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
             "url": "https://tiles.swiss-map.cc/protomaps-planet-pgf-20240215.json"
+        },
+        "dem": {
+            "type": "raster-dem",
+            "encoding": "terrarium",
+            "tiles": ["https://elevation-tiles-prod.s3.amazonaws.com/terrarium/{z}/{x}/{y}.png"],
+            "maxzoom": 13,
+            "tileSize": 256
         }
     },
     "layers": [
@@ -354,6 +361,17 @@
                     15,
                     6
                 ]
+            }
+        },
+        {
+            "id": "hills",
+            "type": "hillshade",
+            "source": "dem",
+            "paint": {
+                "hillshade-exaggeration": 0.5,
+                "hillshade-highlight-color": "rgb(255, 255, 228)",
+                "hillshade-shadow-color": "rgb(173, 188, 199)",
+                "hillshade-illumination-direction": 315
             }
         },
         {
