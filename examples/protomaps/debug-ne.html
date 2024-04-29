@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Positioned Glyph Font | Protomaps Debug Nepali</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <canvas id='textCanvas' height=20></canvas>
+    <script>
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: 'debug-style-ne.json',
+            center: [85.3307, 27.7019],
+            zoom: 8,
+            maplibreLogo: true,
+            hash: "map",
+            attributionControl: false
+        });
+        map.addControl(new maplibregl.AttributionControl({ 'customAttribution': '<a href="https://maplibre.org">MapLibre</a> | <a href="https://github.com/wipfli/positioned-glyph-font">Code on GitHub</a>' }));
+        var ctx = document.getElementById('textCanvas').getContext('2d', { willReadFrequently: true }); //Hidden canvas
+
+        var loadedIds = [];
+        map.on('styleimagemissing', function (e) {
+
+            var id = e.id; // id of the missing image
+            console.log('canvas render:', id);
+
+            if (loadedIds.includes(id)) {
+                // console.log('already loaded', id);
+                return;
+            }
+            loadedIds.push(id);
+
+            // check if this missing icon is one this function can generate
+
+            var text = `${id}`;
+            var fontSize = 20;
+
+            ctx.font = `${fontSize}px sans`;
+            ctx.canvas.width = ctx.measureText(text).width;
+            ctx.canvas.height = 1.5 * fontSize;
+
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+            ctx.fillStyle = "black";
+            ctx.font = `${fontSize}px sans`;
+            ctx.fillText(text, 0, fontSize);
+
+            map.loadImage(ctx.canvas.toDataURL()).then(
+                image => {
+                    map.addImage(id, image.data)
+                });
+        });
+    </script>
+</body>
+
+</html>
