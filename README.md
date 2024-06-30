@@ -1,3 +1,5 @@
+**DEPRECATED: This repo is now deprecated in favor of wipfli/pgf-encoding and wipfli/pgf-glyph-ranges. Read more here: The Protomaps Basemap can now render Devanagari labels correctly. Read more: https://oliverwipfli.ch/devanagari-in-the-protomaps-basemap-with-a-positioned-glyph-font-for-maplibre-2024-06-30/**
+
 # Positioned Glyph Font
 
 The assumption of a one-to-one mapping between glyphs and Unicode codepoints that usually exists in MapLibre font files is given up in a positioned glyph font. Instead, codepoints are used as indices of positioned glyphs.
